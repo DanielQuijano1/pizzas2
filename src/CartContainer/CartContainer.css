@@ -1,0 +1,36 @@
+.flexCarrito{
+    width: 40%;
+}
+
+.titleCarrito{
+    text-align: center;
+    color: #419166;
+    font-size: 2em;
+    position: relative;
+    margin-bottom: 20px;
+    letter-spacing: .07em;
+}
+
+.titleCarrito::after{
+    content: "";
+    width: 200px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #419166;
+    position: absolute;
+    bottom: -10px;
+    left: 3em;
+}
+
+.boxCarrito{
+    width: 90%;
+    min-height: 300px;
+    border: 1px rgba(39, 39, 39, 0.5) solid;
+    margin: 5%;
+}
+
+.sinProductos{
+    height: 300px;
+    display: grid;
+    place-content: center;
+}

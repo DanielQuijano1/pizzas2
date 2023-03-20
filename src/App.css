@@ -1,0 +1,16 @@
+.flexApp {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  background-color: #fffae4;
+}
+
+.flexCategories {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.categories {
+  justify-content: center;
+}

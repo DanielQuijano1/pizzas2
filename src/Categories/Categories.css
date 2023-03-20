@@ -1,0 +1,49 @@
+.flexCategorias{
+    display: block;
+}
+
+.titleCategories{
+    text-align: center;
+    color: #419166;
+    font-size: 2em;
+    position: relative;
+    margin-bottom: 20px;
+    letter-spacing: .07em;
+}
+
+.titleCategories::after{
+    content: "";
+    width: 200px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #419166;
+    position: absolute;
+    bottom: -10px;
+    left: 6.4em;
+}
+
+.categorias {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px 20px 0px 20px;
+    justify-content: space-around;
+}
+
+.flexCategoria {
+    width: 80px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgCategory {
+    width: 50px;
+}
+
+.textCategory {
+    color: #d5483a;
+    text-align: center;
+    font-weight: 600;
+}

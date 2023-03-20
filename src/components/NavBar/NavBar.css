@@ -1,0 +1,11 @@
+.NavBar{
+    display: flex;
+}
+
+.Logo{
+    background-image: url(../../../public/Images/Logo\ MIAPIZZA.png);
+}
+
+.Header{
+    background-image: url(../../../public/Images/piza.jpg);
+}

@@ -1,0 +1,4 @@
+.flexHome{
+    display: flex;
+    flex-direction: row;
+}
