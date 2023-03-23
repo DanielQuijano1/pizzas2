@@ -1,5 +1,57 @@
-.count__signo{
-    color:rgba(71, 71, 71, 0.685);
-    font-size: 1em;
-    
+.count__mainbox{
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+
+.count__title{
+    width: 80px;
+    height: 30px;
+    border: 1px rgba(39, 39, 39, 0.5) solid;
+    border-radius: 15px 0px 0px 15px;
+    display: grid;
+    place-content: center;
+}
+
+.count__flex {
+    width: 80px;
+    height: 30px;
+    border: 1px rgba(39, 39, 39, 0.5) solid;
+    border-radius: 0px 15px 15px 0px;
+    display:flex;
+    flex-direction: row;
+}
+
+.count__numero {
+    color: rgba(53, 52, 52, 0.685);
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 35px;
+    text-align: center;
+    padding: auto;
+    display: grid;
+    place-content: center;
+}
+
+.count__signo {
+    color: rgba(71, 71, 71, 0.685);
+    font-size: 1.5em;
+    font-weight: 900;
+    width: 22px;
+    padding: auto;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    height: 100%;
+}
+
+.count__cart{
+    position: absolute;
+    height: 30px;
+    top: 15px;
+    right: 75px;
+    background-color: #d5483a;
+    padding: 5px 5px 5px 10px;
+    border-radius: 20px 0px 0px 20px;
+    color: antiquewhite;
 }

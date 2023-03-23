@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { cartContext } from "../Storage/cartContext";
-import { obtenerProducto } from "../Storage/MockService";
+import { cartContext } from "../storage/cartContext.js";
+import { obtenerProducto } from "../storage/MockService.js";
+import Card from "./Card";
+import Loader from "../Loader/Loader";
 
 function CardContainer() {
-    const [producto, setProducto] = useState()
+    const [producto, setProducto] = useState({ title: "Cargando", precio: "-" })
     const [isLoading, setIsLoading] = useState(true);
     const [isInCart, setIsInCart] = useState(false)
 

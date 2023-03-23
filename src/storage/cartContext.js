@@ -4,7 +4,6 @@ export const cartContext = createContext();
 
 function CartProvider(props) {
 
-
     const [cart, setCart] = useState([]);
 
     function addToCart(item) {

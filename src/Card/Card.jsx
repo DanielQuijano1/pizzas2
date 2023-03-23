@@ -4,7 +4,7 @@ import CardClose from "./CardClose";
 
 function Card(props) {
 
-  const { title, precio, img, detalle, onAddToCart } = props.item
+  const { title, precio, img, detalle, onAddToCart, validarStock } = props.item
 
   return (
     <>
@@ -27,7 +27,7 @@ function Card(props) {
         </button>} modal nested
       >
         {close => (
-          <CardClose close={close} onAddToCart={onAddToCart} title={title} img={img} detalle={detalle} precio={precio} />
+          <CardClose close={close} onAddToCart={onAddToCart} title={title} img={img} detalle={detalle} precio={precio} validarStock={validarStock}/>
         )}
       </Popup>
     </>
