@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./ItemCount.css"
 
@@ -6,7 +7,7 @@ function ItemCount({ onAddToCart }) {
     const [count, setCount] = useState(0);
 
     function handleCountAdd() {
-            setCount(count + 1); 
+        setCount(count + 1);
     }
 
     function handleCountRemove() {
@@ -22,7 +23,9 @@ function ItemCount({ onAddToCart }) {
                 <Button className="count__signo" onClick={handleCountRemove} text="-" />
                 <Button className="count__signo" onClick={handleCountAdd} text="+" />
             </div>
-            <Button className="count__cart" onClick={() => onAddToCart(count)} text="Agregar al Carrito" />
+            <Link to="/">
+                <Button className="count__cart" onClick={() => onAddToCart(count)} text="Agregar al Carrito" />
+            </Link>
         </div>
     )
 }

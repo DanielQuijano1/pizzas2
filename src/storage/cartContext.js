@@ -7,14 +7,17 @@ function CartProvider(props) {
     const [cart, setCart] = useState([]);
 
     function addToCart(item) {
-        let isInCart = cart.findIndex(itemInCart => itemInCart.title === item.title)
-        let newCart = cart.map(item => item);
-        if (newCart.some(itemS => itemS.title === item.title)) {
-            newCart[isInCart].count += item.count
-            setCart(newCart)
-        } else {
-            newCart.push(item)
-            setCart(newCart);
+        if (item.count > 0) {
+            let isInCart = cart.findIndex(itemInCart => itemInCart.title === item.title)
+            let newCart = cart.map(item => item);
+            if (newCart.some(itemS => itemS.title === item.title)) {
+                newCart[isInCart].count += item.count
+                setCart(newCart)
+            } else {
+                newCart.push(item)
+                setCart(newCart);
+
+            }
         }
     }
 
@@ -31,7 +34,7 @@ function CartProvider(props) {
     function multiplicar(a, b) {
         return a * b
     }
-    
+
     function getTotalItemsInCart() {
         let total = 0;
         total = cart.reduce(
@@ -47,4 +50,4 @@ function CartProvider(props) {
     )
 }
 
-export { CartProvider }; 
+export { CartProvider };  

@@ -5,7 +5,7 @@ import "./CartItem.css"
 function CartItem({ itemInCart, removeItem}) {
     return (
         <div className="targetaCart">
-            <div className="textoCartItem">{itemInCart.detalle}</div>
+            <div className="textoCartItem">{itemInCart.title}</div>
             <div className="espaciadoCart">
                 <div className="textoCartItem">{itemInCart.precio}</div>
                 <div className="cantidad">

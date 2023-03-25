@@ -7,18 +7,21 @@ import ItemListContainer from "./ItemListContainer/ItemListContainer.jsx";
 import HomePage from "./HomePage/HomePage.jsx";
 import { CartProvider } from "./storage/cartContext.js";
 import CartContainer from "./CartContainer/CartContainer.jsx";
-import "./App.css"
+import "./App.css";
+import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer.jsx";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <CartProvider>
-          <Navbar></Navbar>
+          <Navbar/>
           <div className="flexApp">
             <div className="flexCategories">
               <Categories className="categories"/>
               <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<HomePage />}/>
+                <Route path="/detalle/:itemid" element={<ItemDetailContainer/>}/>
                 <Route path="/category/:categoryid" element={<ItemListContainer />} />
                 <Route path="/cart" element={<CartContainer />} />
                 <Route path="*" element={<Error404 />} />

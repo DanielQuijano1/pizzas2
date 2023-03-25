@@ -36,8 +36,8 @@ function CartContainer() {
                             </div>
                             <p className="targetaCart totalDeCompra">El total de tu compra es de ${getTotalItemsInCart()}</p>
                             <div className="buttonItems">
-                                <Button onClick={clear} className="styleButton" text="Limpiar Carrito" ></Button>
-                                <Button text="Finalizar Compra" ></Button>
+                                <Button onClick={clear} className="buttonCart" text="Limpiar Carrito" ></Button>
+                                <Button className="buttonCart" text="Finalizar Compra" ></Button>
                             </div>
                         </div>
                 }
