@@ -28,6 +28,14 @@ function ItemDetailContainer() {
         return stockUpdate
     }
 
+    function validarPrecio(count){
+        let precioEstimado = producto.precio
+        if (count > 1){
+            precioEstimado = precioEstimado * count
+        }
+        return precioEstimado
+    }
+
     useEffect(() => {
         obtenerProducto(params.itemid)
             .then((respuesta) => {
@@ -45,7 +53,7 @@ function ItemDetailContainer() {
                 isLoading ? (
                     <Loader />
                 ) : (
-                    <ItemDetail isInCart={isInCart} onAddToCart={handleAddToCart} title={producto.title} img={producto.img} detalle={producto.detalle} precio={producto.precio} validarStock={validarStock()} />
+                    <ItemDetail isInCart={isInCart} onAddToCart={handleAddToCart} title={producto.title} img={producto.img} detalle={producto.detalle} precio={validarPrecio()} validarStock={validarStock()} />
                 )
             }
         </>

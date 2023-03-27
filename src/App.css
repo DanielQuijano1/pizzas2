@@ -14,3 +14,14 @@
 .categories {
   justify-content: center;
 }
+
+@media screen and (max-width:750px) {
+  .flexApp{
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .flexCategories{
+    width: 100%;
+  }
+}

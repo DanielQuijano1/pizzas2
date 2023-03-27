@@ -17,15 +17,20 @@ function ItemDetail({ title, img, detalle, precio, validarStock, onAddToCart, is
                     <div className="modal__card active">
                         <div className="modal__img">
                             <img src={img} alt={title} />
+                            <Link to="/">
+                                <div className="actions">
+                                    <Button className="close"></Button>
+                                </div>
+                            </Link>
                         </div>
                         <div className="description__flex">
                             <h3 className="description__title">{title}</h3>
                             <small className="description__detail">{detalle}</small>
-                            <div className="description__price">${precio} </div>
+                            <div className="description__price">${precio}</div>
                             {!cart.includes({ title }) === isInCart ?
                                 <div></div>
                                 :
-                                <div>
+                                <div className="description__counter">
                                     <ItemCount text="Cantidad" stock={validarStock} onAddToCart={onAddToCart} />
                                 </div>
                             }
@@ -33,11 +38,7 @@ function ItemDetail({ title, img, detalle, precio, validarStock, onAddToCart, is
                     </div>
                 </div>
 
-                <div className="actions ">
-                    <Link to="/">
-                        <Button className="close" text="cerrar"></Button>
-                    </Link>
-                </div>
+
 
             </div>
         </div>

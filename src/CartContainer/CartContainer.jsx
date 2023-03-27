@@ -14,19 +14,15 @@ function CartContainer() {
             <div className="boxCarrito">
                 {
                     cart.length === 0 ?
-                        <div className="sinProductos"> No hay Items en el carrito</div>
+                        <div className="sinProductos">
+                            <img src="/assets/carro-vacio.png" className="carritoVacio"/>
+                        </div >
                         :
                         <div className="flex">
 
-                            <div className="targetaCart minimizado">
-                                <div className="textoCartItem">
-                                    Producto
-                                </div>
-                                <div className="espaciadoCart">
-                                    <p className="textoCartItem">Precio</p>
-                                    <p className="textoCartItem">Cantidad</p>
-                                    <p className="textoCartItem">Eliminar</p>
-                                </div>
+                            <div className="targetaCartTitle">
+                                <div className="inicio">Producto</div>
+                                <div className="final">Precio</div>
                             </div>
 
                             <div className="cartItems">
@@ -34,7 +30,9 @@ function CartContainer() {
                                     <CartItem itemInCart={itemInCart} removeItem={removeItem}></CartItem>
                                 ))}
                             </div>
-                            <p className="targetaCart totalDeCompra">El total de tu compra es de ${getTotalItemsInCart()}</p>
+
+                            <p className="totalDeCompra">El total de tu compra es de ${getTotalItemsInCart()}</p>
+
                             <div className="buttonItems">
                                 <Button onClick={clear} className="buttonCart" text="Limpiar Carrito" ></Button>
                                 <Button className="buttonCart" text="Finalizar Compra" ></Button>
