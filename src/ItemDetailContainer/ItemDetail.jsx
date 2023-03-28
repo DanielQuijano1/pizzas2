@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import { useContext } from "react";
 import { cartContext } from "../storage/cartContext";
 
-function ItemDetail({ title, img, detalle, precio, validarStock, onAddToCart, isInCart }) {
+function ItemDetail({ title, img, detalle, precio, category, validarStock, onAddToCart, isInCart }) {
 
     const { cart } = useContext(cartContext)
 
@@ -31,7 +31,7 @@ function ItemDetail({ title, img, detalle, precio, validarStock, onAddToCart, is
                                 <div></div>
                                 :
                                 <div className="description__counter">
-                                    <ItemCount text="Cantidad" stock={validarStock} onAddToCart={onAddToCart} />
+                                    <ItemCount text="Cantidad" stock={validarStock} onAddToCart={onAddToCart} category={category} />
                                 </div>
                             }
                         </div>
