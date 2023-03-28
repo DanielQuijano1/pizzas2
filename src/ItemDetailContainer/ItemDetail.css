@@ -14,15 +14,17 @@
     height: 30px;
     background-color: #d5483a;
     border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    
     z-index: 1500;
     display: grid;
     place-content: center;
 }
 
-
+.positionClose{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
 
 .close::before {
     content: "";

@@ -18,9 +18,7 @@ function ItemDetail({ title, img, detalle, precio, category, onAddToCart, isInCa
                         <div className="modal__img">
                             <img src={img} alt={title} />
                             <Link to="/">
-                                <div className="actions">
-                                    <Button className="close"></Button>
-                                </div>
+                                <Button className="close positionClose"></Button>
                             </Link>
                         </div>
                         <div className="description__flex">
