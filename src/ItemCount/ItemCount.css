@@ -43,6 +43,19 @@
     display: grid;
     place-content: center;
     height: 100%;
+    background-color: rgba(255, 235, 205, 0.541);
+}
+
+.arregloCount{
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -6px;
+}
+
+.arreglo{
+    width: 140px;
 }
 
 .count__cart{

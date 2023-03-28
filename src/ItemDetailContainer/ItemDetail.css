@@ -7,7 +7,8 @@
     width: 100%;
 }
 
-.actions {
+
+.close{
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -22,9 +23,6 @@
 }
 
 
-.actions:hover{
-    scale: 1.1;
-}
 
 .close::before {
     content: "";
@@ -50,9 +48,6 @@
     top: 15px;
 }
 
-.close:active {
-    animation: press .5s;
-}
 
 .overlay {
     position: fixed;
@@ -72,7 +67,7 @@
     width: 600px;
     background-color: antiquewhite;
     border-radius: 5px;
-    margin-bottom: 5%;
+    margin-bottom: 5vh;
 }
 
 
@@ -116,6 +111,8 @@
     padding: 5px 10px 5px 5px;
     border-radius: 0px 20px 20px 0px;
     color: antiquewhite;
+    display: grid;
+    place-content: center;
 }
 
 .description__counter{

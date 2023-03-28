@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import { useContext } from "react";
 import { cartContext } from "../storage/cartContext";
 
-function ItemDetail({ title, img, detalle, precio, category, validarStock, onAddToCart, isInCart }) {
+function ItemDetail({ title, img, detalle, precio, category, onAddToCart, isInCart }) {
 
     const { cart } = useContext(cartContext)
 
@@ -26,12 +26,14 @@ function ItemDetail({ title, img, detalle, precio, category, validarStock, onAdd
                         <div className="description__flex">
                             <h3 className="description__title">{title}</h3>
                             <small className="description__detail">{detalle}</small>
-                            <div className="description__price">${precio}</div>
+                            <div className="description__price">
+                                <div> ${precio} </div>
+                            </div>
                             {!cart.includes({ title }) === isInCart ?
                                 <div></div>
                                 :
                                 <div className="description__counter">
-                                    <ItemCount text="Cantidad" stock={validarStock} onAddToCart={onAddToCart} category={category} />
+                                    <ItemCount text="Cantidad" onAddToCart={onAddToCart} category={category} />
                                 </div>
                             }
                         </div>
