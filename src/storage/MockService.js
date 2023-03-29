@@ -1,5 +1,5 @@
 const productos = [
-    { id: 1, title: "Muzzarella", precio: 1300, detalle: "hfjhgfjhgfjhgfjhgfjhgfhjgf", img: "/assets/IMG-20221205-WA0002.jpg", category: "Pizzas", stock: 20},
+    { id: 1, title: "Muzzarella", precio: 1300, detalle: "pizza casera moldeada a mano, con salsa de tomate, muzzarella, aceitunas adornada con especias", img: "/assets/IMG-20221205-WA0002.jpg", category: "Pizzas", stock: 20},
     { id: 2, title: "Jamon", precio: 1700, detalle: "", img: "/assets/IMG-20221205-WA0002.jpg", category: "Pizzas", stock: 20},
     { id: 3, title: "Jamon y morron", precio: 1700, detalle: "", img: "/assets/IMG-20221205-WA0001.jpg", category: "Pizzas", stock: 20},
     { id: 4, title: "Jamon y Roquefort", precio: 1700, detalle: "", img: "/assets/IMG-20221205-WA0002.jpg", category: "Pizzas", stock: 20},

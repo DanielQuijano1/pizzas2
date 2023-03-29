@@ -1,16 +1,14 @@
 .count__mainbox{
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
 }
 
 .count__title{
-    width: 80px;
-    height: 30px;
     border: 1px rgba(39, 39, 39, 0.5) solid;
     border-radius: 15px 0px 0px 15px;
     display: grid;
     place-content: center;
+    padding: 0px 5px 0px 10px;
 }
 
 .count__flex {
@@ -67,7 +65,7 @@
     padding: 5px 5px 5px 10px;
     border-radius: 20px 0px 0px 20px;
     color: antiquewhite;
-    
+    font-size: 1.2em;
 }
 
 .count__cart:active{
@@ -80,5 +78,25 @@
     }
     to {
         scale: 1.1;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .count__title{
+        font-size: 1.5em;
+        font-weight: 500;
+        padding: 5px 5px 5px 10px;
+    }
+    .count__flex{
+        width: auto;
+        height: auto;
+    }
+    .count__numero, .count__signo{
+        padding: 5px 20px;
+        font-size: 1.5em;
+    }
+    .count__numero{
+        bottom: -2px;
     }
 }

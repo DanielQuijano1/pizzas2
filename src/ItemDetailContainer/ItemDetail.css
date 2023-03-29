@@ -60,7 +60,7 @@
     display: grid;
     place-items: end;
     justify-content: center;
-    z-index: 100;
+    z-index: 2000;
     animation: pushUp .5s;
     background-color: rgb(0, 0, 0, .3);
 }
@@ -88,18 +88,29 @@
 
 .description__flex {
     position: relative;
+    width: 100%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.description__category{
+    color: #6969699d;
+    font-size: 1.15em;
+    padding:10px 0px 0px 0px;
 }
 
 .description__title {
     color: #419166;
     text-transform: uppercase;
-    padding: 20px 10px;
-    font-size: 1.3em;
+    padding: 0px 10px 10px 0px;
+    font-size: 1.7em;
 }
 
 .description__detail {
     color: rgba(61, 61, 61, 0.671);
-    padding: 0px 0px 50px 20px;
+    font-size: 1.1em;
+    width: 80vw;
+    height: auto;
 }
 
 .description__price {
@@ -145,5 +156,11 @@
 @media screen and (max-width:750px) {
     .modal__card{
         width: 95vw;
+    }
+    .description__category{
+        padding: 0px 0px 0px 20px;
+    }
+    .description__price{
+        font-size: 1.3em;
     }
 }

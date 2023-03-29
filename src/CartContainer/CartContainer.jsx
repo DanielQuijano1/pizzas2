@@ -50,20 +50,20 @@ function CartContainer() {
                                             :
                                             <div className="flex">
 
-                                                <div className="targetaCartTitle">
+                                                <div className="targetaCartTitle ">
                                                     <div className="inicio">Producto</div>
                                                     <div className="final">Precio</div>
                                                 </div>
 
-                                                <div className="cartItems">
+                                                <div className="cartItems font">
                                                     {cart.map((itemInCart) => (
                                                         <CartItem itemInCart={itemInCart} removeItem={removeItem}></CartItem>
                                                     ))}
                                                 </div>
 
-                                                <p className="totalDeCompra">El total de tu compra es de ${getTotalItemsInCart()}</p>
+                                                <p className="totalDeCompra font">El total de tu compra es de ${getTotalItemsInCart()}</p>
 
-                                                <div className="buttonItems">
+                                                <div className="buttonItems font">
                                                     <Button onClick={clear} className="buttonCart" text="Limpiar Carrito" ></Button>
                                                     <Button className="buttonCart" text="Finalizar Compra" ></Button>
                                                 </div>
