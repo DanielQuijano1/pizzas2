@@ -5,7 +5,7 @@ import CartItem from "./CartItem";
 import "./CartContainer.css";
 import "./CartItem.css"
 import Popup from 'reactjs-popup';
-import "./../ItemDetailContainer/ItemDetail.css"
+import "./../ItemDetailContainer/ItemDetail.css";
 
 function CartContainer() {
     const { cart, removeItem, clear, getTotalItemsInCart } = useContext(cartContext);

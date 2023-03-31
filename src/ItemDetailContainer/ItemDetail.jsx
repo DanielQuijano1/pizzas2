@@ -21,9 +21,7 @@ function ItemDetail({ title, img, detalle, precio, category, onAddToCart, isInCa
                             <div className="description__category"> &#62;&#62; {category}</div>
                             <h3 className="description__title">{title}</h3>
                             <div className="description__detail">{detalle}</div>
-                            <div className="description__price">
-                                <div> ${precio} </div>
-                            </div>
+                            <div className="description__price">${precio}</div>
                             <div className="description__counter">
                                 <ItemCount onAddToCart={onAddToCart} category={category} />
                             </div>

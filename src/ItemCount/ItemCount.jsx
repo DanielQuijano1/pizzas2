@@ -30,24 +30,24 @@ function ItemCount({ onAddToCart, category }) {
 
     return (
         <div className="count__mainbox">
-            <div className="count__title">Cantidad</div>
-
-            {category === "Empanadas" ?
-                <div className="count__flex arreglo">
-                    <Button className="count__numero arregloCount" onClick={handleCountRemoveDoc} text="-6" />
-                    <Button className="count__numero arregloCount" onClick={handleCountRemove} text="-1" />
-                    <div className="count__numero"> {count} </div>
-                    <Button className="count__numero arregloCount" onClick={handleCountAdd} text="+1" />
-                    <Button className="count__numero arregloCount" onClick={handleCountAddDoc} text="+6" />
-                </div>
-                :
-                <div className="count__flex">
-                    <Button className="count__signo" onClick={handleCountRemove} text="-" />
-                    <div className="count__numero"> {count} </div>
-                    <Button className="count__signo" onClick={handleCountAdd} text="+" />
-                </div>
-            }
-
+            <div className="ray">
+                <div className="count__title">Cantidad</div>
+                {category === "Empanadas" ?
+                    <div className="count__flex arreglo">
+                        <Button className="count__numero arregloCount" onClick={handleCountRemoveDoc} text="-6" />
+                        <Button className="count__numero arregloCount" onClick={handleCountRemove} text="-1" />
+                        <div className="count__numero"> {count} </div>
+                        <Button className="count__numero arregloCount" onClick={handleCountAdd} text="+1" />
+                        <Button className="count__numero arregloCount" onClick={handleCountAddDoc} text="+6" />
+                    </div>
+                    :
+                    <div className="count__flex">
+                        <Button className="count__signo" onClick={handleCountRemove} text="-" />
+                        <div className="count__numero"> {count} </div>
+                        <Button className="count__signo" onClick={handleCountAdd} text="+" />
+                    </div>
+                }
+            </div>
             <Link to="/">
                 <Button className="count__cart" onClick={() => onAddToCart(count)} text="Agregar al Carrito" />
             </Link>

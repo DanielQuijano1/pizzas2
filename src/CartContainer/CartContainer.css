@@ -11,6 +11,7 @@
     text-align: center;
     color: #419166;
     font-size: 2em;
+    font-weight: 600;
     position: relative;
     margin-bottom: 20px;
     letter-spacing: .07em;
@@ -58,12 +59,11 @@
     justify-content: space-between;
     color: #419166;
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .font{
-
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .cartItems{
@@ -146,5 +146,4 @@
     letter-spacing: .15em;
     font-size: 1.2em;
     font-weight: 700;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

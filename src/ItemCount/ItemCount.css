@@ -8,12 +8,13 @@
     border-radius: 15px 0px 0px 15px;
     display: grid;
     place-content: center;
-    padding: 0px 5px 0px 10px;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 5px 5px 5px 10px;
 }
 
 .count__flex {
-    width: 80px;
-    height: 30px;
+    width: auto;
     border: 1px rgba(39, 39, 39, 0.5) solid;
     border-radius: 0px 15px 15px 0px;
     display:flex;
@@ -22,26 +23,27 @@
 
 .count__numero {
     color: rgba(53, 52, 52, 0.685);
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight: 500;
     width: 35px;
     text-align: center;
-    padding: auto;
     display: grid;
     place-content: center;
+    padding: 5px 20px;
+    bottom: -2px;
 }
 
 .count__signo {
     color: rgba(71, 71, 71, 0.685);
-    font-size: 1.5em;
-    font-weight: 900;
+    font-weight: 500;
     width: 22px;
-    padding: auto;
     text-align: center;
     display: grid;
     place-content: center;
     height: 100%;
     background-color: rgba(255, 235, 205, 0.541);
+    padding: 5px 20px;
+    font-size: 1.5em;
 }
 
 .arregloCount{
@@ -65,7 +67,7 @@
     padding: 5px 5px 5px 10px;
     border-radius: 20px 0px 0px 20px;
     color: antiquewhite;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .count__cart:active{
@@ -82,21 +84,24 @@
 }
 
 @media screen and (max-width: 750px){
-
-    .count__title{
-        font-size: 1.5em;
-        font-weight: 500;
-        padding: 5px 5px 5px 10px;
-    }
     .count__flex{
-        width: auto;
-        height: auto;
+        width: 100%;
+        justify-content:space-around;
     }
-    .count__numero, .count__signo{
-        padding: 5px 20px;
-        font-size: 1.5em;
+    .ray{
+        display: flex;
+        flex-direction: row;
     }
-    .count__numero{
-        bottom: -2px;
+    .count__cart{
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .count__mainbox{
+        display: block;
     }
 }
