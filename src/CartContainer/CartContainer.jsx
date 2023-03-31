@@ -61,7 +61,7 @@ function CartContainer() {
                                                     ))}
                                                 </div>
 
-                                                <p className="totalDeCompra font">El total de tu compra es de ${getTotalItemsInCart()}</p>
+                                                <p className="totalDeCompra font">El total de tu compra es de <b> ${getTotalItemsInCart()} </b></p>
 
                                                 <div className="buttonItems font">
                                                     <Button onClick={clear} className="buttonCart" text="Limpiar Carrito" ></Button>

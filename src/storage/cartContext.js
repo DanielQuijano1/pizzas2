@@ -21,7 +21,6 @@ function CartProvider(props) {
         }
     }
 
-
     function removeItem(itemInCart) {
         let newCart = cart.filter(elem => elem !== itemInCart)
         setCart(newCart)
@@ -31,14 +30,23 @@ function CartProvider(props) {
         setCart([])
     }
 
-    function multiplicar(a, b) {
-        return a * b
+    function multiplicar(precio, count, category) {
+        let precioTotalFinal = 0;
+
+        if (category === "Empanadas" && count >= 12) {
+            precio = 200;
+            precioTotalFinal = precio * count;
+        } else {
+            precioTotalFinal = precio * count;
+        }
+
+        return precioTotalFinal
     }
 
     function getTotalItemsInCart() {
         let total = 0;
         total = cart.reduce(
-            (totalCuenta, i) => totalCuenta + multiplicar(i.precio, i.count),
+            (totalCuenta, i) => totalCuenta + multiplicar(i.precio, i.count, i.category),
             total)
         return total;
     }
