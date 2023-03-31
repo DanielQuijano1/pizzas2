@@ -36,14 +36,14 @@ function ItemCount({ onAddToCart, category }) {
                     <div className="count__flex arreglo">
                         <Button className="count__numero arregloCount" onClick={handleCountRemoveDoc} text="-6" />
                         <Button className="count__numero arregloCount" onClick={handleCountRemove} text="-1" />
-                        <div className="count__numero"> {count} </div>
+                        <div className="count__numero numero"> {count} </div>
                         <Button className="count__numero arregloCount" onClick={handleCountAdd} text="+1" />
                         <Button className="count__numero arregloCount" onClick={handleCountAddDoc} text="+6" />
                     </div>
                     :
                     <div className="count__flex">
                         <Button className="count__signo" onClick={handleCountRemove} text="-" />
-                        <div className="count__numero"> {count} </div>
+                        <div className="count__numero numero"> {count} </div>
                         <Button className="count__signo" onClick={handleCountAdd} text="+" />
                     </div>
                 }
