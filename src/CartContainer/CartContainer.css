@@ -96,6 +96,7 @@
     opacity: .75;
     border-radius: 15px;
     color: antiquewhite;
+    font-size: .85em;
 }
 
 .buttonCart:hover {

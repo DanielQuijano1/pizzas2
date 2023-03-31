@@ -38,3 +38,9 @@
 .buttonRemove{
     color: #d5473a;
 }
+
+@media screen and (max-width: 700px) {
+    .cantidad { 
+        width: 95%;
+    }
+}
