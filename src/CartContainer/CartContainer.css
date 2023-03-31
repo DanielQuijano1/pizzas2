@@ -41,7 +41,7 @@
 
 }
 
-.carritoVacio{
+.carritoVacio {
     width: 100px;
     height: 100px;
 
@@ -53,7 +53,7 @@
     letter-spacing: .07em;
 }
 
-.targetaCartTitle{
+.targetaCartTitle {
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -62,11 +62,11 @@
     font-size: 1.5em;
 }
 
-.font{
+.font {
     font-size: 1.3em;
 }
 
-.cartItems{
+.cartItems {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
     margin-bottom: 50px;
 }
 
-.totalDeCompra{
+.totalDeCompra {
     width: 100%;
     text-align: center;
     position: absolute;
@@ -108,11 +108,11 @@
     animation: press 2s;
 }
 
-.background{
+.background {
     background-color: #fffae4;
 }
 
-.arregloClose{
+.arregloClose {
     position: relative;
     top: 10px;
     right: -40vw;
@@ -134,13 +134,22 @@
         padding-bottom: 60px;
         max-height: 90vh;
     }
-    .cartItems{
+
+    .cartItems {
         max-height: 40vh;
         overflow: scroll;
     }
+
+    .totalDeCompra {
+        position: relative;
+    }
+
+    .buttonItems{
+        position: relative;
+    }
 }
 
-.popUpCarrito{
+.popUpCarrito {
     position: fixed;
     bottom: 5px;
     width: 90%;
