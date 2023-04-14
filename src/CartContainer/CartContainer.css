@@ -136,13 +136,14 @@
     }
 
     .cartItems {
-        max-height: 50vh;
+        max-height: 40vh;
         overflow: scroll;
         margin-bottom: 0px;
     }
 
     .totalDeCompra {
         position: relative;
+        bottom: 0px;
     }
 
     .buttonItems{
