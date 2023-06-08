@@ -9,10 +9,12 @@ import { CartProvider } from "./storage/cartContext.js";
 import CartContainer from "./CartContainer/CartContainer.jsx";
 import "./App.css";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer.jsx";
+import { exportArray } from "./services/firebase.js";
 
 function App() {
   return (
     <>
+    <button onClick={exportArray}>exportar</button>
       <BrowserRouter>
         <CartProvider>
           <Navbar/>

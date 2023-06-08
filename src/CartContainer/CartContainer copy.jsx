@@ -6,8 +6,6 @@ import "./CartContainer.css";
 import "./CartItem.css"
 import Popup from 'reactjs-popup';
 import "./../ItemDetailContainer/ItemDetail.css";
-import { createOrder } from "../services/firebase";
-import Swal from 'sweetalert2'
 
 function CartContainer() {
     const { cart, removeItem, clear, getTotalItemsInCart } = useContext(cartContext);
@@ -26,36 +24,10 @@ function CartContainer() {
         };
     });
 
-
-    function handleCheckout() {
-        const items = cart.map(({ id, title, precio, count }) => ({ id, title, precio, count }))
-        const order = {
-            buyer: {
-                name: "aa",
-                email: "a@a",
-                phone: 1234,
-            },
-            items: items,
-            priceTotal: getTotalItemsInCart(),
-            date: new Date()
-        };
-        console.table(order)
-        createOrder(order).then((id) => {
-            Swal.fire({
-                title: 'Gracias Por Tu Compra!',
-                text: `Tu Ticket es ${id}`,
-                icon: 'success',
-                confirmButtonText: 'Cool'
-            })
-        })
-
-    }
-
-
     return (
 
         <>
-            {windowsSize < 700 ?
+            { windowsSize < 700  ?
                 <Popup
                     trigger={<button className="popUpCarrito"> {cart.length} items en el carrito </button>}
                     modal
@@ -64,11 +36,11 @@ function CartContainer() {
                     {close => (
                         <div className="overlay">
                             <div className="flexCarrito background">
-                                <Button className="close arregloClose" onClick={() => {
+                            <Button className="close arregloClose" onClick={() => {
                                     close();
                                 }} />
                                 <div className="titleCarrito">Mi Pedido</div>
-
+                                
                                 <div className="boxCarrito">
                                     {
                                         cart.length === 0 ?
@@ -93,7 +65,7 @@ function CartContainer() {
 
                                                 <div className="buttonItems font">
                                                     <Button onClick={clear} className="buttonCart" text="Limpiar Carrito" ></Button>
-                                                    <Button onClick={handleCheckout} className="buttonCart" text="Finalizar Compra" ></Button>
+                                                    <Button className="buttonCart" text="Finalizar Compra" ></Button>
                                                 </div>
                                             </div>
                                     }
@@ -130,7 +102,7 @@ function CartContainer() {
 
                                     <div className="buttonItems">
                                         <Button onClick={clear} className="buttonCart" text="Limpiar Carrito" ></Button>
-                                        <Button onClick={handleCheckout} className="buttonCart" text="Finalizar Compra" ></Button>
+                                        <Button className="buttonCart" text="Finalizar Compra" ></Button>
                                     </div>
                                 </div>
                         }
